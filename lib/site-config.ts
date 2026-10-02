@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "AJH Digital",
-  legalName: "AJH Digital",
+  legalName: "AJH Digital, LLC",
   founder: "Aaron Joseph Hall",
   tagline: "Websites. Content. Digital Growth.",
   description:

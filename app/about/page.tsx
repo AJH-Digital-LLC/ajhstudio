@@ -11,12 +11,12 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = withBrandMetadata({
   title: "About",
   description:
-    "Meet Aaron Joseph Hall and AJH Digital, a brand/DBA of AJH Enterprises, LLC, focused on websites, content, and practical technology.",
+    "Meet Aaron Joseph Hall, founder of AJH Digital, LLC, a digital, creative, and professional services company helping people build what matters.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About | AJH Digital",
     description:
-      "Meet Aaron Joseph Hall and AJH Digital, a brand/DBA of AJH Enterprises, LLC, focused on websites, content, and practical technology.",
+      "Meet Aaron Joseph Hall, founder of AJH Digital, LLC, a digital, creative, and professional services company helping people build what matters.",
     url: "/about",
   },
 });
@@ -42,7 +42,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Aaron Joseph Hall."
-        description="I'm the founder of AJH Digital. I work across communication, websites, and practical technology—and I built this company to bring that work under one roof."
+        description="I'm the founder of AJH Digital. We help people and organizations build what matters through technology, creativity, communication, and strategy."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
       />
 
@@ -63,8 +63,9 @@ export default function AboutPage() {
           <Reveal delay={100} className="flex flex-col gap-6">
             <h2 className="font-display text-3xl text-ink sm:text-4xl">Hi, I&apos;m Aaron.</h2>
             <p className="text-lg leading-relaxed text-text">
-              I started {siteConfig.name} to bring together the work I actually do: building
-              websites and technology and writing and communicating ideas clearly. AJH Digital brings that client work and the products I build together as a brand/DBA of AJH Enterprises, LLC.
+              I founded {siteConfig.legalName} to help individuals, businesses, churches, ministries,
+              and organizations turn ideas into something real. Our work spans websites and
+              digital products, writing and publishing, content development, and consulting.
             </p>
             <p className="text-lg leading-relaxed text-text">
               I&apos;m a pastor, church planter, writer, speaker, consultant, REALTOR®, husband,
@@ -80,30 +81,30 @@ export default function AboutPage() {
         <Container className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <SectionHeading
-              eyebrow="Our Parent Company"
-              title="Part of AJH Enterprises, LLC."
+              eyebrow="One company. Several ways to help."
+              title="Build what matters."
             />
           </Reveal>
           <Reveal delay={100} className="flex flex-col gap-6 text-lg leading-relaxed text-text">
             <p>
-              <strong className="text-ink">Aaron Joseph Hall</strong> is me — the person behind
-              the work, writing the blog, and doing the actual communication and technology
-              work described on this site.
+              <strong className="text-ink">{siteConfig.legalName}</strong> is a digital,
+              creative, and professional services company. Some clients come to us because
+              they need a website. Others need help developing an idea, strengthening their
+              message, writing or publishing a book, creating a digital product, or choosing
+              the right technology for their organization.
             </p>
             <p>
-              <a href="https://ajhenterprises.com" className="font-semibold text-primary underline underline-offset-4">AJH Enterprises, LLC</a> is the parent company of AJH Digital.
-              AJH Digital operates as its brand/DBA for website development, website management,
-              content, and digital services.
+              Our approach is simple: understand the goal, cut through unnecessary complexity,
+              and build something useful. You work directly with the person doing the work,
+              with clear scope and practical next steps.
             </p>
             <p>
-              <strong className="text-ink">Products</strong> like{" "}
+              Alongside client services, AJH Digital develops its own products, including{" "}
               <a href="/products" className="text-primary underline underline-offset-4">
                 The Ministry Study
-              </a>{" "}
-              are individual tools built through AJH Digital — each with its own name and its
-              own purpose.
+              </a>. My personal books, speaking, and ministry work remain distinct from
+              the company&apos;s client services and products.
             </p>
-            <a href="https://ajhenterprises.com" className="font-semibold text-primary underline underline-offset-4">Visit AJH Enterprises, LLC →</a>
           </Reveal>
         </Container>
       </section>

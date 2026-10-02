@@ -44,7 +44,8 @@ Displayed prices are starting prices for the stated package or scope, not guaran
 
 ## Business Information
 
-Company: AJH Digital
+Company: AJH Digital, LLC
+Customer-facing brand: AJH Digital
 Founder: Aaron Joseph Hall
 Website: https://ajhdigital.com/
 AJH Digital is based on Alabama's Gulf Coast and works with clients locally and beyond.

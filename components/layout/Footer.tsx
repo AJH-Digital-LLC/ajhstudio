@@ -148,13 +148,7 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col gap-4 border-t border-background/10 pt-8 text-xs text-background/50 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2 sm:max-w-sm sm:shrink-0">
-            <p>&copy; {year} AJH Enterprises, LLC. All rights reserved.</p>
-            <p>
-              AJH Digital is a brand/DBA of{" "}
-              <a href="https://ajhenterprises.com" className="underline underline-offset-2 transition-colors hover:text-background/80">
-                AJH Enterprises, LLC
-              </a>.
-            </p>
+            <p>&copy; {year} {siteConfig.legalName}. All rights reserved.</p>
           </div>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <Link href="/privacy" className="transition-colors hover:text-background/80">
