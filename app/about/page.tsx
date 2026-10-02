@@ -11,12 +11,12 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = withBrandMetadata({
   title: "About",
   description:
-    "Aaron Joseph Hall is the founder of AJH Digital, building clear communication, websites, and practical technology.",
+    "Meet Aaron Joseph Hall and AJH Digital, a brand/DBA of AJH Enterprises, LLC, focused on websites, content, and practical technology.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About | AJH Digital",
     description:
-      "Aaron Joseph Hall is the founder of AJH Digital, building clear communication, websites, and practical technology.",
+      "Meet Aaron Joseph Hall and AJH Digital, a brand/DBA of AJH Enterprises, LLC, focused on websites, content, and practical technology.",
     url: "/about",
   },
 });
@@ -64,8 +64,7 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl text-ink sm:text-4xl">Hi, I&apos;m Aaron.</h2>
             <p className="text-lg leading-relaxed text-text">
               I started {siteConfig.name} to bring together the work I actually do: building
-              websites and technology and writing and communicating ideas clearly. AJH Digital is the umbrella that holds that client work and the products I build
-              together.
+              websites and technology and writing and communicating ideas clearly. AJH Digital brings that client work and the products I build together as a brand/DBA of AJH Enterprises, LLC.
             </p>
             <p className="text-lg leading-relaxed text-text">
               I&apos;m a pastor, church planter, writer, speaker, consultant, REALTOR®, husband,
@@ -81,8 +80,8 @@ export default function AboutPage() {
         <Container className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <SectionHeading
-              eyebrow="Person, Company, Products"
-              title="Aaron Joseph Hall, AJH Digital, and what I build."
+              eyebrow="Our Parent Company"
+              title="Part of AJH Enterprises, LLC."
             />
           </Reveal>
           <Reveal delay={100} className="flex flex-col gap-6 text-lg leading-relaxed text-text">
@@ -92,18 +91,19 @@ export default function AboutPage() {
               work described on this site.
             </p>
             <p>
-              <strong className="text-ink">{siteConfig.name}</strong> is the company: the
-              umbrella under which client projects, writing, and products are built and
-              operated.
+              <a href="https://ajhenterprises.com" className="font-semibold text-primary underline underline-offset-4">AJH Enterprises, LLC</a> is the parent company of AJH Digital.
+              AJH Digital operates as its brand/DBA for website development, website management,
+              content, and digital services.
             </p>
             <p>
               <strong className="text-ink">Products</strong> like{" "}
               <a href="/products" className="text-primary underline underline-offset-4">
                 The Ministry Study
               </a>{" "}
-              are individual tools built under that umbrella — each with its own name and its
+              are individual tools built through AJH Digital — each with its own name and its
               own purpose.
             </p>
+            <a href="https://ajhenterprises.com" className="font-semibold text-primary underline underline-offset-4">Visit AJH Enterprises, LLC →</a>
           </Reveal>
         </Container>
       </section>
