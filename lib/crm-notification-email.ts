@@ -1,9 +1,13 @@
 import 'server-only';
 import {Resend} from 'resend';
 import {siteConfig} from './site-config';
-export type DocumentEmail={id:string;event:'invoice_sent'|'invoice_paid'|'agreement_sent'|'agreement_signed'|'agreement_completed'|'request_reply'|'delivery_test'|'client_welcome';recipient:'client'|'owner';email:string;client:string;recordId:string;invoiceNumber:string|null;balance:number|null;dueDate:string|null};
+export type DocumentEmail={id:string;event:'invoice_sent'|'invoice_paid'|'agreement_sent'|'agreement_signed'|'agreement_completed'|'request_reply'|'delivery_test'|'client_welcome'|'project_intake_submitted';recipient:'client'|'owner';email:string;client:string;recordId:string;invoiceNumber:string|null;balance:number|null;dueDate:string|null};
 const escape=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 export function documentEmail(n:DocumentEmail){
+ if(n.event==='project_intake_submitted') {
+  const title='Project intake submitted';const url=`${siteConfig.crmUrl}/projects/${n.recordId}/intake`;
+  return {subject:`AJH Digital — ${title}`,text:`${n.client} submitted project intake. Review securely: ${url}`,html:`<div style="font-family:Arial,sans-serif"><h1>${title}</h1><p>${escape(n.client)} submitted project intake.</p><p><a href="${escape(url)}">Review project intake</a></p></div>`};
+ }
  if(n.event==='client_welcome') {
   const title='Welcome to AJH Digital';
   const detail='We look forward to working with you. Your client portal is where you can review shared projects, invoices and agreements, request updates, and exchange project files. If you already have portal access, sign in with your existing account. If you received a separate invitation, follow that invitation to set up access. Otherwise, contact us to arrange your portal setup; this welcome email does not activate an account.';

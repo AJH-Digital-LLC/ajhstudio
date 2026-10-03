@@ -12,7 +12,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: "communication",
-    name: "Content",
+    name: "Content & Creative",
     tagline: "Clear words. Better stories. Stronger messages.",
     shortDescription:
       "Copywriting, content, messaging, storytelling, and communication strategy — the words that make everything else work.",
@@ -28,6 +28,8 @@ export const services: Service[] = [
       "Copywriting",
       "Website copy",
       "Brand messaging",
+      "Branding and digital creative work",
+      "Email and social content",
       "Content strategy",
       "Content creation",
       "Storytelling",
@@ -39,7 +41,7 @@ export const services: Service[] = [
   },
   {
     slug: "websites-technology",
-    name: "Websites",
+    name: "Websites & Technology",
     tagline: "Websites that actually work.",
     shortDescription:
       "Modern websites for businesses, entrepreneurs, nonprofits, community organizations, churches, and anyone who needs something clear, useful, and easy to manage.",
@@ -53,6 +55,8 @@ export const services: Service[] = [
       "Anyone who wants one person to build it, host it, and keep it working",
     ],
     included: [
+      "Web applications and custom digital tools",
+      "Software development scoped to your requirements",
       "Website design",
       "Website development",
       "Custom marketing websites",

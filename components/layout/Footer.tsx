@@ -8,7 +8,9 @@ import { siteConfig } from "@/lib/site-config";
 import Logo from "@/components/ui/Logo";
 
 const serviceLinks = [
-  { label: "SEO", href: "/services#seo" },
+  { label: "Writing & Publishing", href: "/writing-publishing" },
+  { label: "Consulting & Strategy", href: "/consulting" },
+  { label: "Content-level SEO", href: "/services#seo" },
   { label: "Digital Services", href: "/services#digital-services" },
   { label: "Content", href: "/services#communication" },
   { label: "Websites", href: "/services#websites-technology" },
@@ -107,7 +109,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-background/50">
-              Thinking about a website?
+              Have a project in mind?
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-background/70">
               Tell me what you&apos;re building and I&apos;ll follow up personally.

@@ -1,3 +1,4 @@
+import WhatIDo from "@/components/sections/WhatIDo";
 import EntryOffers from "@/components/sections/EntryOffers";
 import {getPublicServices} from "@/lib/service-catalog";
 import ContentRefreshOffer from "@/components/pricing/ContentRefreshOffer";
@@ -13,7 +14,7 @@ import { services } from "@/lib/data/services";
 
 export const metadata: Metadata = withBrandMetadata({
   title: "Services",
-  description: "Websites, content, SEO, and digital guidance for a clearer, more useful online presence.",
+  description: "Websites and technology, writing and publishing, consulting and strategy, and content and creative services built around your goals.",
   alternates: { canonical: "/services" },
   openGraph: {title:"Services | AJH Digital",description:"Websites, content, SEO, and personal digital guidance.",url:"/services"},
 });
@@ -22,7 +23,8 @@ const icons={"websites-technology":Globe2,communication:PenLine,seo:Search,"digi
 export default async function ServicesPage(){
  const catalog=await getPublicServices();
  return <>
-  <PageHero eyebrow="Built around your next step" title={<>A stronger website.<br/>A clearer message.</>} description="From your first website to the content and care that keep it growing, get practical support from one person who understands your project." breadcrumbs={[{label:"Home",href:"/"},{label:"Services"}]}/>
+  <PageHero eyebrow="Built around your next step" title="Build something useful." description="From websites and technology to writing, publishing, and consulting, get practical support from someone who understands your goals." breadcrumbs={[{label:"Home",href:"/"},{label:"Services"}]}/>
+  <WhatIDo />
   <EntryOffers title="Popular Ways to Get Started"/>
   <section className="py-12 sm:py-16">
    <Container>

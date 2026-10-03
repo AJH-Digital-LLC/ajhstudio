@@ -2,9 +2,9 @@ export const siteConfig = {
   name: "AJH Digital",
   legalName: "AJH Digital, LLC",
   founder: "Aaron Joseph Hall",
-  tagline: "Websites. Content. Digital Growth.",
+  tagline: "Build What Matters.",
   description:
-    "AJH Digital helps businesses, churches, organizations, entrepreneurs, and professionals grow their online presence with websites, content, SEO, and personal digital support.",
+    "AJH Digital is a digital, creative, and professional services company helping individuals, businesses, churches, ministries, and organizations turn ideas into something real.",
   coreMessage:
     "Clear strategy, thoughtful design, and practical support for the work that matters to you.",
   url: "https://ajhdigital.com",
@@ -15,7 +15,7 @@ export const siteConfig = {
   // The CRM's branded custom domain. Keep this as the single source of truth
   // for the Internal Login link in the footer.
   crmUrl: "https://crm.ajhdigital.com",
-  projectRequestUrl: "/pricing#build-your-project",
+  projectRequestUrl: "/contact",
   social: {
     instagram: "https://instagram.com/ajhenterprises",
     linkedin: "https://linkedin.com/company/ajhenterprises",

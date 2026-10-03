@@ -64,3 +64,19 @@ export async function readStoredInquiry(id: string, authorization?: string): Pro
   if (rows.length !== 1) throw new Error("Inquiry unavailable");
   return rows[0];
 }
+
+export async function saveCompanyLead(data: import("./contact").ContactFormData, service: string, request: Request): Promise<string> {
+ const {url,key,owner}=connection();
+ const submission={name:data.name.trim(),email:data.email.trim().toLowerCase(),organization:data.organization.trim(),service,message:data.message.trim()+(data.website.trim()?`\nWebsite: ${data.website.trim()}`:"")};
+ const fingerprint=createHash("sha256").update(owner+JSON.stringify(submission)).digest("hex");
+ const source=request.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim()||"unknown";
+ const sourceHash=createHmac("sha256",key).update(source).digest("hex");
+ const response=await fetch(`${url}/rest/v1/rpc/receive_company_lead`,{method:"POST",headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json"},body:JSON.stringify({owner_id:owner,submission,request_fingerprint:fingerprint,source_fingerprint:sourceHash}),cache:"no-store",signal:AbortSignal.timeout(15000)});
+ if(!response.ok)throw new Error("Could not save inquiry");
+ const id=await response.json();if(typeof id!=="string")throw new Error("Invalid inquiry receipt");return id;
+}
+export async function recordLeadNotification(id:string,status:"sent"|"failed") {
+ const {url,key}=connection();
+ const response=await fetch(`${url}/rest/v1/company_leads?id=eq.${encodeURIComponent(id)}`,{method:"PATCH",headers:{apikey:key,Authorization:`Bearer ${key}`,"Content-Type":"application/json"},body:JSON.stringify({notification_status:status}),cache:"no-store",signal:AbortSignal.timeout(10000)});
+ if(!response.ok)throw new Error("Notification status unavailable");
+}

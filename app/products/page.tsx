@@ -33,7 +33,7 @@ export default function ProductsPage() {
       <section className="py-16 sm:py-20 lg:py-24">
         <Container>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {products.map((product, i) => (
+            {products.filter((product) => product.isPublic).map((product, i) => (
               <Reveal key={product.slug} delay={i * 100}>
                 <ProductCard product={product} />
               </Reveal>

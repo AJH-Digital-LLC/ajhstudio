@@ -76,7 +76,9 @@ const organizationJsonLd = {
   sameAs: [siteConfig.social.instagram, siteConfig.social.linkedin],
   makesOffer: [
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Content & SEO" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Websites & Digital Services" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Websites & Technology" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Writing & Publishing" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Consulting & Strategy" } },
   ],
 };
 

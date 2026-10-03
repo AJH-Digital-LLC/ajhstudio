@@ -1,3 +1,5 @@
+import { saveCompanyLead, recordLeadNotification } from "@/lib/crm-intake";
+import { serviceInterest, type ProjectType } from "@/lib/contact";
 import { siteConfig } from "@/lib/site-config";
 import brand from "@/lib/brand.json";
 import { NextResponse } from "next/server";
@@ -20,6 +22,7 @@ export async function POST(request: Request) {
 
   try {
     body = await request.json();
+    if (!body || typeof body !== "object" || Array.isArray(body)) throw new Error("Invalid body");
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid request body." }, { status: 400 });
   }
@@ -45,6 +48,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, errors }, { status: 422 });
   }
 
+  let leadId: string;
+  try { leadId=await saveCompanyLead(data,serviceInterest[data.projectType as ProjectType],request); } catch { return NextResponse.json({ok:false,error:"Your inquiry could not be saved. Please try again or email us directly."},{status:503}); }
+
   const apiKey = process.env.RESEND_API_KEY;
   const toEmail = siteConfig.email;
   const fromEmail = process.env.CONTACT_FROM_EMAIL;
@@ -53,10 +59,8 @@ export async function POST(request: Request) {
     console.error(
       "Contact form is not fully configured. Missing RESEND_API_KEY or CONTACT_FROM_EMAIL."
     );
-    return NextResponse.json(
-      { ok: false, error: "The contact form isn't configured yet. Please email me directly." },
-      { status: 500 }
-    );
+    await recordLeadNotification(leadId,"failed").catch(()=>{});
+    return NextResponse.json({ok:true});
   }
 
   const resend = new Resend(apiKey);
@@ -88,22 +92,13 @@ export async function POST(request: Request) {
       replyTo: data.email,
       subject,
       html,
-    });
+    }, {idempotencyKey:`contact-${leadId}`});
 
-    if (result.error) {
-      console.error("Resend error:", result.error);
-      return NextResponse.json(
-        { ok: false, error: "I couldn't send your message. Please try again or email me directly." },
-        { status: 502 }
-      );
-    }
-
+    await recordLeadNotification(leadId,result.error?"failed":"sent").catch(()=>{});
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Contact form send failed:", error);
-    return NextResponse.json(
-      { ok: false, error: "I couldn't send your message. Please try again or email me directly." },
-      { status: 500 }
-    );
+    await recordLeadNotification(leadId,"failed").catch(()=>{});
+    return NextResponse.json({ok:true});
   }
 }

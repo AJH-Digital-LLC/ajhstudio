@@ -1,6 +1,6 @@
 # AJH Digital
 
-> AJH Digital helps businesses, churches, ministries, organizations, entrepreneurs, and professionals build and maintain effective digital experiences.
+> AJH Digital is a digital, creative, and professional services company helping individuals, businesses, churches, ministries, and organizations build what matters.
 
 ## Primary Website
 
@@ -14,6 +14,8 @@ AJH Digital provides website design and development, hosting and website care, c
 
 - [Home](https://ajhdigital.com/)
 - [Services](https://ajhdigital.com/services)
+- [Writing & Publishing](https://ajhdigital.com/writing-publishing)
+- [Consulting & Strategy](https://ajhdigital.com/consulting)
 - [Small Business Websites](https://ajhdigital.com/small-business-websites)
 - [Church & Ministry Websites](https://ajhdigital.com/church-websites)
 - [Website Content Refresh](https://ajhdigital.com/content-refresh)
@@ -30,6 +32,9 @@ AJH Digital provides website design and development, hosting and website care, c
 - [Affiliate Disclosure](https://ajhdigital.com/affiliate-disclosure)
 
 ## Services
+
+- Writing & Publishing: book and manuscript development, writing and author consulting, editing, copywriting, articles, devotionals, resources, and publishing guidance. Scope and pricing are agreed after a consultation.
+- Consulting & Strategy: digital, website, technology, workflow, writing, content, and digital product strategy, with training and practical next steps. Request a consultation for a scoped quote.
 
 - Small Business Websites: professionally designed standard small business websites with hosting and ongoing management. Essential starts at $199 one-time setup plus $49/month; Simple Start starts at $0 setup plus $99/month. No long-term contract; cancel anytime. Custom functionality, advanced integrations, e-commerce, booking systems, extensive development and third-party services are quoted separately based on project requirements.
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import type { Product } from "@/lib/data/products";
 
@@ -5,6 +6,8 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="flex h-full flex-col justify-between gap-6 rounded-2xl border border-border bg-surface p-8 sm:p-9">
       <div className="flex flex-col gap-3">
+        {product.image && <Image src={product.image} alt={product.name} width={480} height={240} className="h-40 w-full rounded-xl object-contain" />}
+        <p className="text-xs font-medium text-muted">{product.status}</p>
         <span className="w-fit rounded-full bg-surface-alt px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted">
           {product.category}
         </span>

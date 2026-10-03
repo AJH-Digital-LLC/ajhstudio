@@ -10,9 +10,9 @@ import Process from "@/components/sections/Process";
 import WebsiteOffer from "@/components/sections/WebsiteOffer";
 
 export const metadata: Metadata = withBrandMetadata({
-  title: "AJH Digital | Websites. Content. Digital Growth.",
+  title: "Build What Matters | AJH Digital",
   description:
-    "Managed small business websites from $49/month + $199 setup or $99/month with no setup fee. Church & Ministry Websites from $25/month. Custom websites and content services.",
+    "Websites, technology, writing, publishing, and consulting for individuals, businesses, churches, ministries, and organizations. Practical help to build what matters.",
   alternates: { canonical: "/" },
 });
 
@@ -20,8 +20,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <EntryOffers />
       <WhatIDo />
+      <EntryOffers />
       <WebsiteOffer />
       <FeaturedWork />
       <Process />
