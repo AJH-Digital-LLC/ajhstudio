@@ -44,5 +44,6 @@ export const testimonials: Testimonial[] = [
 ];
 
 export function getFeaturedTestimonial() {
-  return testimonials.find((t) => t.featured) ?? testimonials[0];
+  const published = testimonials.filter((t) => !t.isPlaceholder);
+  return published.find((t) => t.featured) ?? published[0];
 }

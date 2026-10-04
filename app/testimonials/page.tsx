@@ -5,6 +5,8 @@ import Container from "@/components/ui/Container";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import FinalCta from "@/components/sections/FinalCta";
 import Reveal from "@/components/ui/Reveal";
+import Button from "@/components/ui/Button";
+import { siteConfig } from "@/lib/site-config";
 import { testimonials, getFeaturedTestimonial } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = withBrandMetadata({
@@ -20,17 +22,18 @@ export const metadata: Metadata = withBrandMetadata({
 
 export default function TestimonialsPage() {
   const featured = getFeaturedTestimonial();
-  const rest = testimonials.filter((t) => t.id !== featured.id);
+  const rest = testimonials.filter((t) => !t.isPlaceholder && t.id !== featured?.id);
 
   return (
     <>
       <PageHero
         eyebrow="Client Experience"
-        title="Good work should speak for itself."
-        description="I care about the relationship as much as the result. Here's what it's been like for people to work with me — from the first conversation through launch and beyond."
+        title="Client testimonials."
+        description="Good work starts with listening, clear communication, and personal attention. This is where we share client experiences with AJH Digital."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Testimonials" }]}
       />
 
+      {featured ? (
       <section className="py-16 sm:py-20 lg:py-24">
         <Container>
           <h2 className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
@@ -41,6 +44,22 @@ export default function TestimonialsPage() {
           </Reveal>
         </Container>
       </section>
+
+      ) : (
+        <section className="py-16 sm:py-20 lg:py-24">
+          <Container>
+            <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-surface-alt p-8 sm:p-12">
+              <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">Client stories are on the way.</h2>
+              <p className="mt-4 leading-relaxed text-muted">We’ll share testimonials here as clients give permission to publish their feedback. In the meantime, explore our work or tell us about your experience.</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button href="/websites">Explore Our Work</Button>
+                <Button href={`mailto:${siteConfig.email}?subject=My%20AJH%20Digital%20experience`}>Share Your Experience</Button>
+              </div>
+              <p className="mt-4 text-sm text-muted">We’ll confirm your permission and how you’d like to be credited before publishing your feedback.</p>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {rest.length > 0 && (
         <section className="border-t border-border bg-surface-alt py-16 sm:py-20 lg:py-24">
