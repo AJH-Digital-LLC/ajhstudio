@@ -10,7 +10,7 @@ export const siteConfig = {
   url: "https://ajhdigital.com",
   productionUrl: "https://ajhdigital.com",
   domain: "AJHDigital.com",
-  logo: { primary: "/brand/logo.webp", light: "/brand/logo-light.webp", email: "/brand/logo.png", icon: "/brand/monogram.webp" },
+  logo: { primary: "/brand/logo.webp?v=2", light: "/brand/logo-light.webp?v=2", email: "/brand/logo.png?v=2", icon: "/brand/monogram.webp" },
   email: "AJHDigitalLLC@gmail.com",
   // The CRM's branded custom domain. Keep this as the single source of truth
   // for the Internal Login link in the footer.

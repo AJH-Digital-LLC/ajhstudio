@@ -9,12 +9,12 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = withBrandMetadata({
   title: "Contact",
   description:
-    "Get in touch with Aaron Joseph Hall at AJH Digital about a website, technology, or communication project.",
+    "Get in touch with Aaron Joseph Hall at AJH Digital about websites, writing, publishing, consulting, content, or technology.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | AJH Digital",
     description:
-      "Get in touch with Aaron Joseph Hall at AJH Digital about a website, technology, or communication project.",
+      "Get in touch with Aaron Joseph Hall at AJH Digital about websites, writing, publishing, consulting, content, or technology.",
     url: "/contact",
   },
 });
@@ -25,7 +25,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let's talk."
-        description="Tell me about your website, communication, or technology project and I'll follow up personally."
+        description="Tell me about your idea, project, or next step and I'll follow up personally."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Contact" }]}
       />
 
@@ -33,16 +33,16 @@ export default function ContactPage() {
         <Container>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-8">
-              <h2 className="font-display text-xl text-ink">Have a website project?</h2>
+              <h2 className="font-display text-xl text-ink">Have a project in mind?</h2>
               <p className="text-sm leading-relaxed text-muted">
                 Use the contact form below to share what you&apos;re building, what you need,
-                and what you&apos;re hoping the website will accomplish.
+                and what you&apos;re hoping the project will accomplish.
               </p>
             </div>
             <div className="flex flex-col gap-4 rounded-2xl border border-border bg-surface p-8">
               <h2 className="font-display text-xl text-ink">Something else in mind?</h2>
               <p className="text-sm leading-relaxed text-muted">
-                Communication, technology, a product question, or anything else —
+                Writing, a book, consulting, creative work, a product question, or anything else —
                 use the form below.
               </p>
             </div>

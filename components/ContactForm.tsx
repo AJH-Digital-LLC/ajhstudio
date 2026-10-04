@@ -184,7 +184,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor={`${formId}-message`} className="text-sm font-medium text-ink">
-          Message <span className="text-secondary">*</span>
+          {data.projectType === "Other" ? "Tell us what you need" : "Message"} <span className="text-secondary">*</span>
         </label>
         <textarea
           id={`${formId}-message`}
