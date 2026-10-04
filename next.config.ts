@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/refund-policy", destination: "/our-approach", permanent: true },
       {
         source: "/work",
         destination: "/websites",

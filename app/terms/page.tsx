@@ -65,7 +65,7 @@ export default function TermsPage() {
               cancellation stops future renewals. Payment and refund terms for your specific
               engagement are governed by its accepted written terms. Refunds are not automatic
               or guaranteed; applicable legal rights and existing accepted agreements remain
-              respected. Read <Link href="/refund-policy">Our Service Approach</Link> for how
+              respected. Read <Link href="/our-approach">Our Service Approach</Link> for how
               we work, review public-facing work, and communicate pricing and scope.
             </p>
 

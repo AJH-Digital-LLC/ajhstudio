@@ -128,7 +128,7 @@ export default async function PricingPage({searchParams}:{searchParams:Promise<{
 
       <WebsiteLevels seoPrice={activeProjectServices.find(s=>s.id==="content-seo")?.monthlyPrice}/>
       <ContentRefreshOffer service={activeProjectServices.find(s=>s.id==="website-content-refresh")}/>
-      <div className="mx-auto max-w-6xl px-6 py-5 text-sm">Where a setup fee applies, it is due before work begins. <Link href="/refund-policy" className="underline">Read our service approach</Link>.</div>
+      <div className="mx-auto max-w-6xl px-6 py-5 text-sm">Where a setup fee applies, it is due before work begins. <Link href="/our-approach" className="underline">Read our service approach</Link>.</div>
       <ProjectBuilder key={initialService??"default"} initialService={initialService} services={activeProjectServices} />
 
       <section className="py-16 sm:py-20 lg:py-24">

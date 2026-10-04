@@ -2,8 +2,8 @@ import { createHash } from "node:crypto";
 import type { Metadata } from "next";
 import { siteConfig } from "./site-config";
 import brand from "./brand.json";
-export function socialImage(title: string, description: string, category = "Websites. Content. Digital Growth.", slug = "") {
-  return `/social-image?${new URLSearchParams({title, description, category, slug, v: createHash("sha256").update(JSON.stringify(["2026-09-share-v2",brand, siteConfig.logo, siteConfig.productionUrl])).digest("hex").slice(0,16)})}`;
+export function socialImage(title: string, description: string, category: string = siteConfig.tagline, slug = "") {
+  return `/social-image?${new URLSearchParams({title, description, category, slug, v: createHash("sha256").update(JSON.stringify(["2026-10-clean-share-v3",brand, siteConfig.logo, siteConfig.productionUrl])).digest("hex").slice(0,16)})}`;
 }
 export function withBrandMetadata(metadata: Metadata): Metadata {
   const title = typeof metadata.title === "string" ? metadata.title : siteConfig.name;

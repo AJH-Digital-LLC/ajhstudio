@@ -1,6 +1,6 @@
 import Container from "@/components/ui/Container";
 import {withBrandMetadata} from "@/lib/social";
-export const metadata=withBrandMetadata({title:"A Better Way to Build & Manage Your Website",description:"Straightforward, personal digital services with clear pricing, human judgment and no long-term contracts for standard monthly services.",alternates:{canonical:"/refund-policy"}});
+export const metadata=withBrandMetadata({title:"A Better Way to Build & Manage Your Website",description:"Straightforward, personal digital services with clear pricing, human judgment and no long-term contracts for standard monthly services.",alternates:{canonical:"/our-approach"}});
 const principles=[
  ["Stay because it works—not because you’re locked in.","Our standard monthly services don’t require long-term contracts. If we’re going to keep your business, we want to earn it month after month."],
  ["Smart technology. Human judgment.","We use modern tools, including AI-assisted workflows, to work more efficiently and keep our services affordable. But technology doesn’t make the final decisions—real people do."],

@@ -7,3 +7,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Social sharing images
+Every new public page must use `withBrandMetadata` from `lib/social.ts` with its title, description, and canonical route. This generates its own branded Open Graph and Twitter image. Blog posts automatically inherit their image from the existing blog metadata/data pipeline; do not hardcode replacement image URLs. Keep `app/social-image/route.tsx` as the shared image design and bump the version in `lib/social.ts` when that design changes.

@@ -160,7 +160,7 @@ export default function Footer() {
             <Link href="/church-websites" className="transition-colors hover:text-background/80">Church & Ministry Websites</Link>
             <Link href="/small-business-websites" className="transition-colors hover:text-background/80">Small Business Websites</Link>
             <Link href="/content-refresh" className="transition-colors hover:text-background/80">Website Content Refresh</Link>
-            <Link href="/refund-policy" className="transition-colors hover:text-background/80">Our Service Approach</Link>
+            <Link href="/our-approach" className="transition-colors hover:text-background/80">Our Service Approach</Link>
             <Link href="/terms" className="transition-colors hover:text-background/80">
               Terms of Service
             </Link>
