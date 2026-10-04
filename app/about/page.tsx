@@ -102,9 +102,9 @@ export default function AboutPage() {
               Alongside client services, AJH Digital develops its own products, including{" "}
               <a href="/products" className="text-primary underline underline-offset-4">
                 The Ministry Study
-              </a>. My books, speaking engagements, and ministry-related work also operate
-              through AJH Digital, LLC, bringing my work as an author and speaker
-              together with the company&apos;s client services, publications, and digital products.
+              </a>. My books, written materials, and digital resources are also part of
+              AJH Digital, LLC, bringing my work as an author together with the
+              company&apos;s writing, publishing, and digital product offerings.
             </p>
           </Reveal>
         </Container>
